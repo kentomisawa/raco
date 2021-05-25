@@ -6,6 +6,6 @@ members = [
     "node",
     "pallets/parachain-info",
     "pallets/token-dealer",
-    "pallets/waw-core",
+    "pallets/raco-core",
     "runtime"
 ]

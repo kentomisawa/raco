@@ -6,7 +6,7 @@ use cumulus_service::{
 	prepare_node_config, start_collator, start_full_node, StartCollatorParams, StartFullNodeParams,
 };
 use polkadot_primitives::v0::CollatorPair;
-use waw_runtime::opaque::Block;
+use raco_runtime::opaque::Block;
 use sc_executor::native_executor_instance;
 pub use sc_executor::NativeExecutor;
 use sc_informant::OutputFormat;
@@ -19,8 +19,8 @@ use std::sync::Arc;
 // Native executor instance.
 native_executor_instance!(
 	pub RuntimeExecutor,
-	waw_runtime::api::dispatch,
-	waw_runtime::native_version,
+	raco_runtime::api::dispatch,
+	raco_runtime::native_version,
 );
 
 /// Starts a `ServiceBuilder` for a full service.
@@ -236,9 +236,9 @@ pub fn start_node(
 	validator: bool,
 ) -> sc_service::error::Result<(
 	TaskManager,
-	Arc<TFullClient<Block, waw_runtime::RuntimeApi, RuntimeExecutor>>,
+	Arc<TFullClient<Block, raco_runtime::RuntimeApi, RuntimeExecutor>>,
 )> {
-	start_node_impl::<waw_runtime::RuntimeApi, RuntimeExecutor>(
+	start_node_impl::<raco_runtime::RuntimeApi, RuntimeExecutor>(
 		parachain_config,
 		collator_key,
 		polkadot_config,

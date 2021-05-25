@@ -7,7 +7,7 @@ use crate::{
 use codec::Encode;
 use cumulus_primitives::ParaId;
 use log::info;
-use waw_runtime::Block;
+use raco_runtime::Block;
 use polkadot_parachain::primitives::AccountIdConversion;
 use sc_cli::{
 	ChainSpec, CliConfiguration, DefaultConfigurationValues, ImportParams, KeystoreParams,
@@ -67,7 +67,7 @@ impl SubstrateCli for Cli {
 	}
 
 	fn native_runtime_version(_: &Box<dyn ChainSpec>) -> &'static RuntimeVersion {
-		&waw_runtime::VERSION
+		&raco_runtime::VERSION
 	}
 }
 
@@ -157,7 +157,7 @@ pub fn run() -> Result<()> {
 
 			runner.run_subcommand(subcommand, |mut config| {
 				let params = crate::service::new_partial::<
-					waw_runtime::RuntimeApi,
+					raco_runtime::RuntimeApi,
 					crate::service::RuntimeExecutor,
 				>(&mut config)?;
 

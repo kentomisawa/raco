@@ -1,11 +1,11 @@
 [package]
-name = "waw"
+name = "raco"
 version = "0.0.0"
 authors = []
 edition = "2018"
 
 [[bin]]
-name = "waw"
+name = "raco"
 path = "src/main.rs"
 
 [dependencies]
@@ -20,7 +20,7 @@ structopt = "0.3.3"
 ansi_term = "0.12.1"
 serde = { version = "1.0.101", features = ["derive"] }
 
-waw-runtime = { path = "../runtime", version = "0.0.0" }
+raco-runtime = { path = "../runtime", version = "0.0.0" }
 
 # Substrate dependencies
 sc-consensus = "0.8.0"

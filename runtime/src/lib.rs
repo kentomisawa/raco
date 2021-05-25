@@ -33,8 +33,8 @@ pub use pallet_timestamp::Call as TimestampCall;
 pub use sp_runtime::BuildStorage;
 pub use sp_runtime::{Perbill, Permill};
 
-/// Import the waw-core pallet.
-pub use pallet_waw_core;
+/// Import the raco-core pallet.
+pub use pallet_raco_core;
 
 /// Import the message pallet.
 pub use pallet_token_dealer;
@@ -86,8 +86,8 @@ impl_opaque_keys! {
 
 /// This runtime version.
 pub const VERSION: RuntimeVersion = RuntimeVersion {
-	spec_name: create_runtime_str!("waw"),
-	impl_name: create_runtime_str!("waw"),
+	spec_name: create_runtime_str!("raco"),
+	impl_name: create_runtime_str!("raco"),
 	authoring_version: 1,
 	spec_version: 1,
 	impl_version: 1,
@@ -241,8 +241,8 @@ impl pallet_token_dealer::Trait for Runtime {
 	type XCMPMessageSender = MessageBroker;
 }
 
-/// Configure the pallet waw-core in pallets/waw-core.
-impl pallet_waw_core::Trait for Runtime {
+/// Configure the pallet raco-core in pallets/raco-core.
+impl pallet_raco_core::Trait for Runtime {
 	type Event = Event;
 }
 
@@ -262,7 +262,7 @@ construct_runtime! {
 		TransactionPayment: pallet_transaction_payment::{Module, Storage},
 		ParachainInfo: pallet_parachain_info::{Module, Storage, Config},
 		TokenDealer: pallet_token_dealer::{Module, Call, Event<T>},
-		WawCoreModule: pallet_waw_core::{Module, Call, Storage, Event<T>},
+		racoCoreModule: pallet_raco_core::{Module, Call, Storage, Event<T>},
 	}
 }
 

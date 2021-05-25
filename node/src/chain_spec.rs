@@ -1,7 +1,7 @@
 // Copyright 2020 Parity Technologies (UK) Ltd.
 
 use cumulus_primitives::ParaId;
-use waw_runtime::{
+use raco_runtime::{
 	AccountId, BalancesConfig, GenesisConfig, Signature, SudoConfig, SystemConfig,
 	ParachainInfoConfig, WASM_BINARY,
 };

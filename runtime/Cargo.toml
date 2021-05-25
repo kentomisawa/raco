@@ -1,5 +1,5 @@
 [package]
-name = "waw-runtime"
+name = "raco-runtime"
 version = "0.0.0"
 authors = []
 edition = "2018"
@@ -15,7 +15,7 @@ serde = { version = "1.0.101", default-features = false, optional = true, featur
 
 pallet-parachain-info = { path = "../pallets/parachain-info", version = "0.0.0", default-features = false }
 pallet-token-dealer = { path = "../pallets/token-dealer", version = "0.1.0", default-features = false }
-pallet-waw-core = { path = "../pallets/waw-core", version = "0.0.0", default-features = false }
+pallet-raco-core = { path = "../pallets/raco-core", version = "0.0.0", default-features = false }
 
 # Substrate dependencies
 sp-std = { default-features = false, version = "2.0.0" }
@@ -74,7 +74,7 @@ std = [
 	"pallet-sudo/std",
 	"pallet-transaction-payment/std",
 	"pallet-parachain-info/std",
-	"pallet-waw-core/std",
+	"pallet-raco-core/std",
     "pallet-token-dealer/std",
 	"cumulus-runtime/std",
 	"cumulus-parachain-upgrade/std",
